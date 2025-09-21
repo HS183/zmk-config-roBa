@@ -56,19 +56,88 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-
-        EqualDollar: EqualDollar {
+        EqualBackslash: EqualDollar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp KP_EQUAL &kp>, <&macro_press>;
-
+            bindings = <&kp KP_EQUAL &kp RS(BACKSLASH)>;
             label = "EQUALDOLLAR";
+        };
+
+        LeftparenthesisUnderscore: CollonSemicollon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RS(UNDERSCORE)>;
+            label = "COLLONSEMICOLLON";
+        };
+
+        LeftbraceAmpersand: LeftbraceAmpersand {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RS(AMPERSAND)>;
+            label = "LEFTBRACEAMPERSAND";
+        };
+
+        AtsignMinus: AtsignMinus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp AT_SIGN &kp RS(MINUS)>;
+            label = "ATSIGNMINUS";
+        };
+
+        TildeDollar: TildeDollar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp RS(DOLLAR)>;
+            label = "TILDEDOLLAR";
+        };
+
+        ExclamationPercent: ExclamationPercent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCLAMATION &kp RS(PERCENT)>;
+            label = "EXCLAMATIONPERCENT";
+        };
+
+        RightparenthesisPlus: RightparenthesisPlus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_PARENTHESIS &kp RS(PLUS)>;
+            label = "RIGHTPARENTHESISPLUS";
+        };
+
+        RightbraceAsterisk: RightbraceAsterisk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACE &kp RS(ASTERISK)>;
+            label = "RIGHTBRACEASTERISK";
+        };
+
+        SlashApostrophe: SlashApostropheQuote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_SLASH &kp RS(APOSTROPHE)>;
+            label = "SLASHAPOSTROPHEQUOTE";
+        };
+
+        RightbracketQuote: RightbracketQuote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET &kp RS(DOUBLE_QUOTES)>;
+            label = "RIGHTBRACKETQUOTE";
+        };
+
+        SpacePipe: SpacePipe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp RS(PIPE)>;
+            label = "SPACEPIPE";
+        };
+
+        BackspaceCaret: BackspaceCaret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE &kp RS(CARET)>;
+            label = "BACKSPACECARET";
         };
     };
 
@@ -99,19 +168,19 @@
 
         NUM {
             bindings = <
-&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0                                               &kp HASH        &kp LEFT_BRACKET   &kp KP_SLASH  &kp RIGHT_BRACKET  &trans
-&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_COMMA     &kp LANG_ZENKAKUHANKAKU      &kp TILDE       &kp RS(DOLLAR)  &kp RS(BACKSLASH)  &trans        &trans             &trans
-&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERIOD       &kp LEFT_ALT                 &kp ENTER       &kp SEMICOLON   &trans             &trans        &trans             &trans
-&trans  &trans           &trans           &trans           &trans           &trans                       &kp LEFT_SHIFT  &trans                                                              &trans
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0                                               &kp HASH         &kp LEFT_BRACKET            &SlashApostrophe     &RightbracketQuote     &trans
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_COMMA     &kp LANG_ZENKAKUHANKAKU      &TildeDollar    &EqualBackslash  &LeftparenthesisUnderscore  &AtsignMinus         &RightparenthesisPlus  &SpacePipe
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERIOD       &kp LEFT_ALT                 &kp ENTER       &kp SEMICOLON    &LeftbraceAmpersand         &ExclamationPercent  &RightbraceAsterisk    &BackspaceCaret
+&trans  &trans           &trans           &trans           &trans           &trans                       &kp LEFT_SHIFT  &trans                                                                                   &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans          &kp UP_ARROW    &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp F4  &kp LEFT_ARROW  &kp F2          &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans          &kp DOWN_ARROW  &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                   &trans
             >;
         };
 
@@ -128,10 +197,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 

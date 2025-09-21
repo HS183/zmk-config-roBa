@@ -159,10 +159,10 @@
 
         SIGN {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans          &kp UP_ARROW    &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp F4  &kp LEFT_ARROW  &kp F2          &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans          &kp DOWN_ARROW  &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                   &trans
+&trans         &kp KP_MINUS   &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp SLASH                                                     &kp HASH      &kp LEFT_BRACKET      &kp QUESTION     &kp RIGHT_BRACKET      &trans
+&kp AMPERSAND  &kp PLUS       &kp UNDERSCORE  &kp KP_SLASH       &kp KP_COMMA  &mt LANGUAGE_2 LANGUAGE_1      &trans           &kp KP_EQUAL  &kp LEFT_PARENTHESIS  &kp AT_SIGN      &kp RIGHT_PARENTHESIS  &kp SPACE
+&kp DOLLAR     &kp ASTERISK   &kp PERCENT     &kp BACKSLASH      &kp PERIOD    &kp LEFT_ALT                   &kp ENTER        &kp COLON     &kp LEFT_BRACE        &kp EXCLAMATION  &kp RIGHT_BRACE        &kp BACKSPACE
+&kp PIPE       &kp SEMICOLON  &kp CARET       &trans             &trans        &trans                         &kp RIGHT_SHIFT  &trans                                                                      &kp DELETE
             >;
         };
 

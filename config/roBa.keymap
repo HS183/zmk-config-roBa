@@ -138,7 +138,7 @@
         Language: Language {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG_HIRAGANA &kp RS(LANGUAGE_3)>;
+            bindings = <&kp LANGUAGE_1 &kp RS(LANGUAGE_2)>;
             label = "LANGUAGE";
         };
     };

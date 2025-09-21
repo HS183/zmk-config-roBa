@@ -159,19 +159,19 @@
 
         SIGN {
             bindings = <
-&trans      &kp KP_MINUS       &kp AMPERSAND  &kp AT_SIGN           &kp SLASH                                                   &kp HASH        &kp RIGHT_BRACKET  &kp QUESTION      &kp BACKSLASH         &trans
-&kp CARET   &kp COLON          &kp UNDER      &kp KP_SLASH          &kp COMMA   &mt LANGUAGE_2 LANGUAGE_1      &kp PLUS         &kp UNDERSCORE  &kp ASTERISK       &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp BACKSPACE
-&kp DOLLAR  &kp DOUBLE_QUOTES  &kp PERCENT    &kp NON_US_BACKSLASH  &kp PERIOD  &kp LEFT_ALT                   &kp ENTER        &kp APOSTROPHE  &kp RIGHT_BRACE    &kp EXCLAMATION   &kp PIPE              &kp SPACE
-&kp PIPE2   &kp SEMICOLON      &kp CARET      &trans                &trans      &trans                         &kp RIGHT_SHIFT  &trans                                                                     &kp DELETE
+&trans         &kp KP_MINUS   &kp APOSTROPHE  &kp DOUBLE_QUOTES     &kp SLASH                                                   &kp HASH      &kp LEFT_BRACKET      &kp QUESTION     &kp RIGHT_BRACKET      &trans
+&kp AMPERSAND  &kp PLUS       &kp UNDER       &kp KP_SLASH          &kp COMMA   &mt LANGUAGE_2 LANGUAGE_1      &kp TILDE        &kp KP_EQUAL  &kp LEFT_PARENTHESIS  &kp AT_SIGN      &kp RIGHT_PARENTHESIS  &kp BACKSPACE
+&kp DOLLAR     &kp ASTERISK   &kp PERCENT     &kp NON_US_BACKSLASH  &kp PERIOD  &kp LEFT_ALT                   &kp ENTER        &kp COLON     &kp LEFT_BRACE        &kp EXCLAMATION  &kp RIGHT_BRACE        &kp SPACE
+&kp PIPE       &kp SEMICOLON  &kp CARET       &trans                &trans      &trans                         &kp RIGHT_SHIFT  &trans                                                                      &kp DELETE
             >;
         };
 
         NUM {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                                                        &trans  &trans          &kp UP_ARROW    &trans           &trans
-&trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &mt LANGUAGE_2 LANGUAGE_1      &trans           &kp F4  &kp LEFT_ARROW  &kp F2          &kp RIGHT_ARROW  &kp BACKSPACE
-&trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &kp LEFT_ALT                   &kp ENTER        &trans  &trans          &kp DOWN_ARROW  &trans           &kp SPACE
-&trans  &trans        &trans        &trans        &trans        &trans                         &kp RIGHT_SHIFT  &trans                                                   &kp DELETE
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans                                                           &trans  &trans          &kp UP_ARROW    &trans           &trans
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &mt LANGUAGE_2 LANGUAGE_1      &trans           &kp F4  &kp LEFT_ARROW  &kp F2          &kp RIGHT_ARROW  &kp BACKSPACE
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans           &kp LEFT_ALT                   &kp ENTER        &trans  &trans          &kp DOWN_ARROW  &trans           &kp SPACE
+&trans  &trans           &trans           &trans           &trans           &trans                         &kp RIGHT_SHIFT  &trans                                                   &kp DELETE
             >;
         };
 

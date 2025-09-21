@@ -62,6 +62,14 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        EqualDollar: EqualDollar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_EQUAL &kp>, <&macro_press>;
+
+            label = "EQUALDOLLAR";
+        };
     };
 
     behaviors {
@@ -80,30 +88,30 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W           &kp E         &kp R                        &kp T                                                &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A       &kp S           &kp D         &kp F                        &kp G             &kp LEFT_SHIFT      &kp BACKSPACE  &kp H      &kp J  &kp K      &kp L    &kp COLON
-&kp Z       &kp X           &kp C         &kp V                        &kp B             &kp LEFT_ALT        &kp SPACE      &kp N      &kp M  &kp COMMA  &kp DOT  &kp UNDERSCORE
-&bt BT_NXT  &bt BT_CLR_ALL  &kp LEFT_GUI  &lt_to_layer_0 5 INT_HENKAN  &lt 2 INT_HENKAN  &kp LCTRL           &lt 1 ENTER    &kp ENTER                             &kp DEL
+&kp Q       &kp W           &kp E    &kp R    &kp B                                                        &kp J      &kp U  &kp I          &kp O             &kp P
+&kp A       &kp D           &kp F    &kp Z    &kp C           &kp LANG_ZENKAKUHANKAKU      &kp INT_HENKAN  &kp H      &kp Y  &kp K          &lt 5 L           &kp SPACE
+&kp G       &kp X           &kp T    &kp S    &kp V           &kp LEFT_ALT                 &kp ENTER       &kp N      &kp M  &kp LESS_THAN  &kp GREATER_THAN  &kp BACKSPACE
+&bt BT_NXT  &bt BT_CLR_ALL  &kp ESC  &kp TAB  &lt 0 LEFT_GUI  &lt 0 LCTRL                  &lt 0 ENTER     &kp ENTER                                          &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        FUNCTION {
+        NUM {
             bindings = <
-&trans  &trans          &kp UP_ARROW    &trans           &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans          &trans          &trans           &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans          &trans          &trans           &trans  &trans      &trans   &trans                          &kp F12
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0                                               &kp HASH        &kp LEFT_BRACKET   &kp KP_SLASH  &kp RIGHT_BRACKET  &trans
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_COMMA     &kp LANG_ZENKAKUHANKAKU      &kp TILDE       &kp RS(DOLLAR)  &kp RS(BACKSLASH)  &trans        &trans             &trans
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERIOD       &kp LEFT_ALT                 &kp ENTER       &kp SEMICOLON   &trans             &trans        &trans             &trans
+&trans  &trans           &trans           &trans           &trans           &trans                       &kp LEFT_SHIFT  &trans                                                              &trans
             >;
         };
 
-        NUM {
+        FUNCTION {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
@@ -128,24 +136,6 @@
         };
 
         SCROLL {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
-        };
-
-        layer_7 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
